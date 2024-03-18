@@ -1,11 +1,5 @@
-# Food-Image-Recognition
+# Food-Calorie-Estimation
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers](https://img.shields.io/github/stars/MaharshSuryawala/Food-Image-Recognition?style=flat-square)]()
-[![Followers](https://img.shields.io/github/followers/MaharshSuryawala?style=flat-square)](https://github.com/MaharshSuryawala)
-[![MIT License][license-shield]][license-url]
-[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/MaharshSuryawala/Food-Image-Recognition)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -18,22 +12,15 @@
     - [Dataset](#dataset)
   - [Results](#results)
     - [Demo](#demo)
-    - [Accuracy](#accuracy)
-    - [Loss](#loss)
-    - [Testing on random images.](#testing-on-random-images)
     - [Visualization of different layers.](#visualization-of-different-layers)
-    - [Heat-Map & Class-Activation-Map](#heat-map--class-activation-map)
-  - [Contributing](#contributing)
-  - [License](#license)
+  
   - [Contact](#contact)
   - [References](#references)
-  - [Acknowledgements](#acknowledgements)
-
+  
 ## About the Project
 
 ![Food](.images/Head.jpg)
 
-<span>Photo by <a href="https://unsplash.com/@jaywennington?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
 ### Overview
 
@@ -73,69 +60,27 @@ Nutrition Information Source: [Food Data Central API](https://fdc.nal.usda.gov/a
 
 ![demo](.images/Demo.jpg)
 
-### Accuracy
 
-![Accuracy](.images/accuracy.png)
-
-### Loss
-
-![Loss](.images/loss.png)
-
-### Testing on random images.
-
-![Test](.images/test.png)
 
 ### Visualization of different layers.
 
 ![Layers](.images/layers.png)
 
-### Heat-Map & Class-Activation-Map 
 
-![Heatmap](.images/heatmap.png)
 
-<!-- CONTRIBUTING -->
-## Contributing  
 
-Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/amazing-feature`)
-3. Commit your Changes (`git commit -m 'feat: some amazing feature'`)
-4. Push to the Branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<!-- CONTACT -->
 ## Contact
-[![Linkedin](https://api.iconify.design/openmoji:linkedin.svg?width=40&height=40)](https://www.linkedin.com/in/maharsh-suryawala-05410312b/) 
+[![Linkedin](https://api.iconify.design/openmoji:linkedin.svg?width=40&height=40)](https://www.linkedin.com/in/nikhil-chakravarthy-064504203/) 
 
-Maharsh Suryawala - [Portfolio](https://maharshsuryawala.github.io/maharshsuryawala/)
+Nikhil Chakravarthy - [Portfolio](https://nikhilchakravarthy.netlify.app)
 
-Project Link: [https://github.com/MaharshSuryawala/Food-Image-Recognition](https://github.com/MaharshSuryawala/Food-Image-Recognition)
 
 ## References
 
 * [https://cspinet.org/eating-healthy/why-good-nutrition-important](https://cspinet.org/eating-healthy/why-good-nutrition-important)
 * [https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3)
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Img Shields](https://shields.io)
-* [Iconify](https://iconify.design/)
-* [MIT License](https://opensource.org/licenses/MIT)
-* [Unsplash](https://unsplash.com/)
-* [Badgen](https://badgen.net/)
-* [For The Badge](https://forthebadge.com/)
 
-
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-
-
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/MaharshSuryawala)
 
 
 <!-- MARKDOWN LINKS -->
