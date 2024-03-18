@@ -31,7 +31,7 @@
 
 ## About the Project
 
-![Food](.images/Demo.jpg)
+![Food](.images/Head.jpg)
 
 <span>Photo by <a href="https://unsplash.com/@jaywennington?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
@@ -71,7 +71,7 @@ Nutrition Information Source: [Food Data Central API](https://fdc.nal.usda.gov/a
 
 ### Demo
 
-![demo](.images/Head.jpg)
+![demo](.images/Demo.jpg)
 
 ### Accuracy
 
