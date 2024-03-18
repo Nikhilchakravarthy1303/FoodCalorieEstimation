@@ -1,4 +1,4 @@
-# Food-Calorie-Estimation
+# Food-Calorie-Estimation  with Integrated Generative AI
 
 
 <!-- TABLE OF CONTENTS -->
@@ -40,6 +40,7 @@
 * [Python](https://www.python.org/)
 * [Jupyter Notebook](https://jupyter.org/)
 * [Google Colab](https://colab.research.google.com/)
+* [Generative AI](https://pypi.org/project/google-generativeai/)
 
 ### Dataset
 
