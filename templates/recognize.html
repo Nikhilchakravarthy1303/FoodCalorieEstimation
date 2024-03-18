@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Food Recognition & Nutrition Visualization</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+ 
+<body class="bg-gray-800 text-white ">
+    <div class="bg-yellow-400 text-gray-800 text-center py-8">
+        <h1 class="font-bold text-4xl">Upload the food images here.</h1>
+    </div>
+ 
+    <div class=" container mx-auto mt-8 text-2xl space-y-4 ">
+
+      <div>
+        <input id="fileInput" class="block w-full text-lg text-gray-900 border border-yellow-300 rounded-lg cursor-pointer bg-yellow-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" name="img" multiple />
+      </div>
+
+      <div class="flex flex-row place-content-center">
+      <div>
+        <form enctype="multipart/form-data">
+            
+            <button type="button" onclick="uploadFiles()" class="bg-yellow-400 text-gray-800 px-4 py-2 rounded hover:bg-white mr-4 pr-4">Upload</button>
+        </form>
+      </div>
+      
+      <div>
+        <form action="/predict">
+            <button type="submit" class="bg-yellow-400 text-gray-800 px-4 py-2 rounded hover:bg-white">Recognize</button>
+        </form>
+      </div>
+
+    </div>
+  
+      <div>
+        <ul id="fileList" class="list-disc pl-8"></ul>
+      </div>
+
+    </div>
+ 
+    <script>
+        function uploadFiles() {
+            const input = document.getElementById('fileInput');
+            const fileList = document.getElementById('fileList');
+            const files = input.files;
+            fileList.innerHTML = '';
+            for (const file of files) {
+                const listItem = document.createElement('li');
+listItem.textContent = file.name;
+                fileList.appendChild(listItem);
+            }
+ 
+            const formData = new FormData();
+            for (const file of files) {
+                formData.append('img', file);
+            }
+ 
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Files uploaded successfully');
+                } else {
+                    console.error('Error uploading files');
+                }
+            }).catch(error => {
+                console.error('Error uploading files:', error);
+            });
+        }
+    </script>
+</body>
+ 
+</html>

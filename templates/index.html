@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Image Recognition and Nutrition Visualization System</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+ 
+<body class="bg-gray-800 font-sans text-gray-200">
+    <div class="bg-yellow-400 py-8">
+        <div class="container mx-auto text-gray-800 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold">Food Calorie Estimation</h1>
+        </div>
+    </div>
+ 
+    <div class="container mx-auto mt-10 px-4 md:px-0">
+        <div class="md:flex md:justify-between">
+            <div class="md:w-1/2 md:pr-4">
+                <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+                <p class="mb-6">Each year, approximately 678,000 deaths are caused in the United States of America due to unhealthy diets. A typical American diet is too high in calories, fat, sugars, sodium, etc. Hence, people have become more proactive when it comes to health matters. Services like eating habit recorder and calorie/nutrition calculator have become extremely popular. They can make users aware of problems like obesity, cancer, diabetes, heart disease, etc. that can be caused by unhealthy diets. Most of these services require the users to manually select a food item from a hierarchical menu which is a time-consuming process and not so user-friendly.</p>
+                <p class="mb-6">A user-interactive system that takes food images as input, recognizes the food automatically, and gives the nutritional facts as output will save a lot of time.</p>
+                <a href="/recognize" class="relative border-2 border-yellow-400 bg-transparent py-2.5 px-5 font-medium uppercase text-yellow-400 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-yellow-400 before:transition-transform before:duration-300 before:content-[''] hover:text-green-500 hover:border-green-500 before:hover:scale-x-100">Click here to start!</a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="{{ img }}" alt="food photo" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</body>
+ 
+</html>

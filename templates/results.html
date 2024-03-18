@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Image Recognition & Nutrition Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body class="bg-gray-800">
+    <div class="bg-yellow-400 text-gray-800 text-center py-8">
+        <h1 class="text-4xl font-bold">Results</h1>
+    </div>
+    <div class="container mx-auto my-8 space-y-8">
+        {% for p in pack %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="{{ p.image }}" class="mx-auto" width="400" height="400" />
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md flex flex-col justify-between">
+                <table class="w-full mb-4">
+                    <thead>
+                        <tr>
+                            <th class="border px-4 py-2">Name</th>
+                            <th class="border px-4 py-2">Probability(%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key, value in p.result.items() %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ key }}</td>
+                            <td class="border px-4 py-2">{{ value }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+
+                <div class="text-center">
+                    <a href="{{ p.food }}" target="_blank" class="block text-blue-500 hover:underline">Click here for more nutrition information.</a>
+                </div>
+                <div class="text-right text-xs text-gray-800">ImageNet model trained with food101, Base:100gm</div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                    <h1 class="block mb-2 text-2xl font-bold text-gray-800 bg-yellow-400 px-4 py-2 rounded-lg" for="quantity">{{p.ai.text }}</h1> 
+                    <div class="text-right text-xs text-gray-800">Generative AI</div>      
+            </div>
+            
+
+        </div>
+        {% endfor %}
+        
+        <h2 class="text-center font-bold text-yellow-400 text-4xl">Nutrition Report</h2>
+        <div id="piechart" class="mx-auto" style="height: 500px;"></div>
+        <div class="text-center ">
+            <a href="/recognize" class="relative border-2 border-yellow-400 bg-transparent py-2.5 px-5 font-medium uppercase text-yellow-400 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-yellow-400 before:transition-transform before:duration-300 before:content-[''] hover:text-green-500 hover:border-green-500 before:hover:scale-x-100">Click here to go back</a>
+        </div>
+    </div>
+    <script>
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            let dataset = [];
+            dataset.push(['name', 'value']);
+            let wholefood = {{ whole_nutrition|safe }};
+            wholefood.forEach(element => dataset.push([element.name, element.value]));
+            console.log(dataset);
+            let data = google.visualization.arrayToDataTable(dataset);
+            let options = {
+                is3D: false
+            };
+            let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+        
+        
+    </script>
+</body>
+
+</html>

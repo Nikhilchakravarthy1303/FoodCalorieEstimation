@@ -1,0 +1,4 @@
+.DS_Store
+.vscode
+best_model_101class.hdf5
+model_trained_101class.hdf5
