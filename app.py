@@ -18,7 +18,7 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-os.environ['GOOGLE_API_KEY'] = "AIzaSyCy80evJfiROFP-kXQozUBiZMoYcw-v11w"
+os.environ['GOOGLE_API_KEY'] = "AIzaSyCy........................"
 genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 
 # # define label meaning
